@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/food",
+    "pages/food/food",
+    "pages/myCart/myCart",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#43bf92",
+    "navigationBarTitleText": "an",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/tab1.png",
+        "selectedIconPath": "image/tab5.png"
+      },
+      {
+        "pagePath": "pages/food/food",
+        "text": "食疗坊",
+        "iconPath": "image/tab2.png",
+        "selectedIconPath": "image/tab6.png"
+      },
+      {
+        "pagePath": "pages/myCart/myCart",
+        "text": "购物车",
+        "iconPath": "image/tab3.png",
+        "selectedIconPath": "image/tab7.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "我的",
+        "iconPath": "image/tab4.png",
+        "selectedIconPath": "image/tab4.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

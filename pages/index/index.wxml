@@ -1,0 +1,47 @@
+<view class="banner">
+  <swiper indicator-dots="true" autoplay="true" interval="2000" bindchange="swiperChange">
+    <swiper-item wx:for="{{bannerArr}}" wx:key="index">
+      <image class="image" src="{{item.image}}" mode="aspectFill"></image>
+      <view class="des">{{item.title}}</view>
+    </swiper-item>
+
+  </swiper>
+  <view class="banner-current">{{currentIndex+1}}/{{bannerArr.length}}</view>
+
+</view>
+
+<view class='one-day'>
+  <view class='one-item'>
+    <image src='../../image/info_left.jpg'></image>
+    <view>每日一测</view>
+
+  </view>
+  <view class='one-item'>
+    <image src='../../image/info_right.jpg'></image>
+    <view>每日食谱</view>
+
+  </view>
+
+</view>
+<view class="item">
+  <view class="title">标题</view>
+  <view class="item-wrapper">
+    <view class="img">
+      <image src="../../image/list.jpg"></image>
+    </view>
+    <view class="info">
+      产品介绍-产品介绍-产品介绍-产品介绍</view>
+  </view>
+  <view class="ready-num"><text>123455</text>次阅读1</view>
+</view>
+<view class="item">
+  <view class="title">标题</view>
+  <view class="item-wrapper">
+    <view class="img">
+      <image src="../../image/list.jpg"></image>
+    </view>
+    <view class="info">
+      产品介绍-产品介绍-产品介绍-产品介绍</view>
+  </view>
+  <view class="ready-num"><text>1234</text>次阅读</view>
+</view>
