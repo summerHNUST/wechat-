@@ -50,16 +50,20 @@ swiper image{
   font-size: 28rpx;
   color: #4d4b4b;
 }
+.list{
+  padding: 0 20px;
+}
 .item{
   padding-bottom: 18rpx;
   border-bottom: 1rpx solid hotpink;
   margin-bottom: 20rpx;
+  position: relative;
 }
 .title{
   font-size: 30rpx;
   color: blue;
   margin-bottom: 18rpx;
-  position: relative;
+ 
 }
 .item-wrapper{
   display: flex;
