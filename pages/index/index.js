@@ -1,4 +1,6 @@
 // index.js
+import request from '../../utils/request'
+//const { host,bannerUrl,indexUrl } =require('../../common/config')
 Page({
 
   /**
@@ -6,8 +8,15 @@ Page({
    */
   data: {
     bannerArr:[],
-    currentIndex:0
+    currentIndex:0,
+    list:[]
     
+  },
+  goDetail(e){
+   // console.log(e);
+    wx.navigateTo({
+      url: '../indexDtail/indexDtail?mark='+e.currentTarget.dataset.id,
+    })
   },
   swiperChange:function(res){
     //console.log(res);
@@ -25,20 +34,45 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    wx.request({
-      url: 'http://iwenwiki.com:3002/api/banner',
-      method:'GET',
-      success:(parmas)=>{
-        console.log(parmas);
-       if(parmas.data.status==200){
-         this.setData({
-           bannerArr:parmas.data.data
-         })
-       }
+  onLoad:async function (options) {
+    // var that=this
+    // wx.request({
+    //   // url: 'http://iwenwiki.com:3002/api/banner',
+    //   url:host+bannerUrl,  
+    //   method:'GET',
+    //   success:(parmas)=>{
+    //     //console.log(parmas);
+    //    if(parmas.data.status==200){
+    //      that.setData({
+    //        bannerArr:parmas.data.data
+    //      })  
+    //    }
 
-      }
+    //   }
+    // })
+    const res = await request('/api/banner')
+    this.setData({
+      bannerArr:res.data.data   
     })
+
+    const result=await request('/api/indexlist')
+    this.setData({
+      list:result.data.data
+    })
+
+    // wx.request({
+    //   //url:'http://iwenwiki.com:3002/api/indexlist',
+    //   url:host+indexUrl,
+    //   method:'GET',
+    //   success:(res)=>{
+    //     //console.log(res);
+    //     if(res.data.status==200){
+    //       that.setData({
+    //         list:res.data.data
+    //       })
+    //     }
+    //   }
+    // })
     
   },
 

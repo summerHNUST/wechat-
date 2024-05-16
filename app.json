@@ -1,10 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/food",
     "pages/food/food",
     "pages/myCart/myCart",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/indexDtail/indexDtail",
+    "pages/foodType/foodType"
   ],
   "window": {
     "backgroundTextStyle": "light",
